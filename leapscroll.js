@@ -1,11 +1,11 @@
 (function (Leap) {
   "use strict";
   const treshold = 0.7;
-  const amplifier_x = 5;
+  const amplifier_x = 7;
   const amplifier_y = -7;
   var compare_to = null;
   Leap && Leap.loop(function (frame) {
-    if (!frame.valid || frame.pointables.length < 3 || frame.hands.length !== 1) {
+    if (!frame.valid || frame.pointables.length < 2 || frame.hands.length !== 1) {
       compare_to = null;
       return;
     }
