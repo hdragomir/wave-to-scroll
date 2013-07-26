@@ -3,6 +3,7 @@
   <title>leap scroll</title>
   <style>
   body {
+    padding: 2em;
     counter-reset: divs;
     font-size: 100%;
     line-height: 1.4;
@@ -16,14 +17,17 @@
   .countable {
     counter-increment: divs;
   }
-  .countable:before {
-    content: counter(divs);
+  .countable:before, .hero {
     font-size: 3em;
     color: #888;
   }
+  .countable:before {
+    content: counter(divs);
+   }
   </style>
 </head>
 <body>
+  <h1 class=hero>Have <a href=https://www.leapmotion.com/>Leap</a>? Wave to scroll and pan!</h1>
   <div class="countable"></div>
   <div class="countable"></div>
   <div class="countable"></div>
@@ -68,6 +72,7 @@
   <div class="countable"></div>
   <div class="countable"></div>
   <div class="countable"></div>
+  <footer class=hero>This page and <a href=https://github.com/hdragomir/wave-to-scroll>scrolling code</a> was brought to you by <a href=http://hdragomir.com>Horia Dragomir</a></footer>
   <script src="http://js.leapmotion.com/0.2.0-beta1/leap.min.js"></script>
   <script src=leapscroll.js></script>
 </body>
